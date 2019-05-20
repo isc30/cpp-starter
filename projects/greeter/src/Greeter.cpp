@@ -1,6 +1,16 @@
 #include "Greeter.hpp"
 
-int Calculator::Sum(int left, int right) const noexcept
+std::string Greeter::Greet(std::string_view name) const noexcept
 {
-    return left + right;
+    if (name == "Ivan")
+    {
+        return "Sir";
+    }
+
+    if (name == "Uxue")
+    {
+        return "Lady";
+    }
+
+    return "Hi";
 }

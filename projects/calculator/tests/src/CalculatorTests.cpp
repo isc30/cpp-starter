@@ -2,7 +2,7 @@
 
 #include "Calculator.hpp"
 
-TEST(Sum, ReturnsProperResult)
+TEST(Calculator, Sum_ReturnsProperResult)
 {
     Calculator calculator;
     int result = calculator.Sum(1, 2);

@@ -1,7 +1,5 @@
-cmake_minimum_required (VERSION 3.5)
-
 add_library(greeter)
-target_compile_features(greeter PRIVATE cxx_std_17)
+target_compile_features(greeter PUBLIC cxx_std_17)
 
 # Tests
 add_subdirectory(tests)
