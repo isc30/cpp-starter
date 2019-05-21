@@ -5,8 +5,8 @@ dist: xenial
 sudo: required
 
 compiler:
-  - clang
-  - gcc
+  - clang-8
+  - gcc-9
 
 env:
   global:
