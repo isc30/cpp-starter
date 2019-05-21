@@ -21,8 +21,8 @@ before_install:
   - export CXX_FLAGS=${CXX_FLAGS}" "${ENV_CXX_FLAGS}
 
 install:
-  - cmake --version
   - ${CXX} --version
+  - cmake --version
     
 script:
   - mkdir build
