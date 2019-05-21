@@ -20,7 +20,7 @@ matrix:
       env:
         - MATRIX_EVAL="CC=gcc-9 && CXX=g++-9"
 
-    - name: clang 7
+    - name: clang 8
       os: linux
       dist: xenial
       sudo: required
