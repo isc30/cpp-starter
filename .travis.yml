@@ -1,32 +1,24 @@
 language: cpp
 
+os: linux
+dist: trusty
+sudo: required
+
+compiler:
+  - clang
+  - gcc
+
 env:
   global:
-    - LINUX_DIST=trusty
-    - DEPS_DIR=${TRAVIS_BUILD_DIR}/deps
     - CXX_FLAGS="-Wall -pedantic -Werror -Wno-variadic-macros -Wno-long-long -Wno-shadow"
-    - RUN_TESTS=true
 
-matrix:
-  include:
-    - os: linux
-      dist: trusty
-      sudo: true
-      compiler:
-        - clang
-        - gcc
-    
-before_install:
-  - export CMAKE_OPTIONS=${CMAKE_OPTIONS}" "${ENV_CMAKE_OPTIONS}
-  - export CXX_FLAGS=${CXX_FLAGS}" "${ENV_CXX_FLAGS}
-
-install:
-  - ${CXX} --version
-  - cmake --version
-    
-script:
+before_script:
   - mkdir build
   - cd build
   - cmake ${CMAKE_OPTIONS} -DCMAKE_CXX_FLAGS=${CXX_FLAGS} ..
+
+script:
   - cmake --build .
-  - ctest
+
+after_script:
+  - cmake --build . --target test
