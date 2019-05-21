@@ -1,13 +1,5 @@
 language: cpp
 
-os: linux
-dist: xenial
-sudo: required
-
-compiler:
-  - clang-8
-  - gcc-9
-
 env:
   global:
     - CXX_FLAGS="-Wall -pedantic -Werror -Wno-variadic-macros -Wno-long-long -Wno-shadow"
