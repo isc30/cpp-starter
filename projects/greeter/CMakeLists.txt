@@ -1,15 +1,6 @@
 project(greeter)
 add_library(greeter)
 
-# C++17
-target_compile_features(greeter PUBLIC cxx_std_17)
-target_compile_options(greeter PUBLIC -std=c++17)
-set_target_properties(greeter PROPERTIES
-    CXX_STANDARD 17
-    CXX_STANDARD_REQUIRED YES
-    CXX_EXTENSIONS NO
-)
-
 # Tests
 add_subdirectory(tests)
 
