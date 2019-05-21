@@ -1,2 +1,5 @@
-add_subdirectory(downloadproject)
+# DownloadProject
+include(downloadproject/DownloadProject.cmake)
+
+# Google Test
 add_subdirectory(googletest)
