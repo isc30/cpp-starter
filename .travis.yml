@@ -61,4 +61,4 @@ script:
 
 # Run Tests
 after_script:
-  - cmake --build . --target test
+  - ctest -V
