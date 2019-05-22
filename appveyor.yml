@@ -11,14 +11,18 @@ configuration:
   - Release
   - Debug
 
+# Configure Environment
 install:
   - git submodule update --init --recursive
 
+# Configure
 before_build:
   - cmake -A%PLATFORM% .
 
+# Build
 build_script:
   - cmake --build .
 
+# Run Tests
 test_script:
   - ctest -V
