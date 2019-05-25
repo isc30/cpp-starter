@@ -15,5 +15,5 @@ build/
 .vscode/
 
 # Windows
-**/*.a
-**/*.exe
+*.a
+*.exe
